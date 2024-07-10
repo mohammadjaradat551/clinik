@@ -1,0 +1,30 @@
+[33mcommit fb0ab48d460ec729d94ca96c515fee6f24d2297b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Merge: 3a9719b 025b0ae
+Author: mohammadjaradat551 <155164996+mohammadjaradat551@users.noreply.github.com>
+Date:   Mon Jul 8 18:19:27 2024 +0300
+
+    Resolved merge conflicts by removing .pyc files
+
+[33mcommit 3a9719bb8f26ca834a3c135a2d602444c73ad3d9[m
+Author: mohammadjaradat551 <155164996+mohammadjaradat551@users.noreply.github.com>
+Date:   Mon Jul 8 18:13:14 2024 +0300
+
+    add about and service pages
+
+[33mcommit 025b0aed5f77dc6de3801714695e712c77135198[m[33m ([m[1;32mmohammad[m[33m)[m
+Author: mohammadjaradat551 <155164996+mohammadjaradat551@users.noreply.github.com>
+Date:   Mon Jul 8 18:10:32 2024 +0300
+
+    add about and service pages
+
+[33mcommit 173f291acd08d651eb5993aa5742253a73ee4901[m
+Author: mohammadjaradat551 <155164996+mohammadjaradat551@users.noreply.github.com>
+Date:   Mon Jul 8 17:44:54 2024 +0300
+
+    add templates and apply frontend changes(static files)
+
+[33mcommit 34c450df733e316ed8cd9800ebf389b3a2826c7f[m
+Author: mohammadjaradat551 <155164996+mohammadjaradat551@users.noreply.github.com>
+Date:   Mon Jul 1 16:23:13 2024 +0300
+
+    create virtaul enviroment and start project
