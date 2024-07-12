@@ -11,7 +11,7 @@ class Section(models.Model):
 
 class Doctors(models.Model):
     doctor_name = models.CharField(max_length=100)
-    Section=models.ForeignKey(Section, on_delete=models.CASCADE, related_name='doctors_section')
+    section=models.ForeignKey(Section, on_delete=models.CASCADE, related_name='doctors_section')
     
     def __str__(self):
         return self.doctor_name
