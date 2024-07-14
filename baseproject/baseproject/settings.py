@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'bootstrap4',
     ]
 
+LOGIN_URL = 'login'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -69,6 +71,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                #regester for footer_context_proccessor(app name, file name, func name)
+                'home.footer_proccessor.myfooter'
             ],
         },
     },

@@ -1,5 +1,6 @@
 from django.shortcuts import redirect, render
 from .forms import TakeAppointmentForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -20,3 +21,12 @@ def make_appointment(request):
         form = TakeAppointmentForm(section_name=section_name)
 
     return render(request, 'appointment/appointment.html', {'form': form})
+
+
+
+def my_appointment(request):
+    
+    context = {
+
+    }
+    return render(request, 'appointment/my_appointment.html')
