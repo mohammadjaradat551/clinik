@@ -1,32 +1,24 @@
-from django.shortcuts import redirect, render
-from .forms import TakeAppointmentForm
+from django.views import View
+from django.shortcuts import render, redirect
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
+from .forms import TakeAppointmentForm
 
-# Create your views here.
+class MakeAppointmentView(LoginRequiredMixin, View):
+    template_name = 'appointment/appointment.html'
+    
+    def get(self, request):
+        
+        section_name = request.GET.get('section')
+        form = TakeAppointmentForm(section_name=section_name)
+        return render(request, self.template_name, {'form': form, 'section_name': section_name})
 
-#appointment section
-#mail and phone
-
-
-def make_appointment(request):
-    section_name = request.POST.get('section')
-    print(f" section name: {section_name}")
-    if request.method == 'POST':
+    def post(self, request):
+        section_name = request.POST.get('section')
         form = TakeAppointmentForm(request.POST, section_name=section_name)
         if form.is_valid():
             form.instance.user = request.user
             form.save()
             return redirect("/")
-    else:
-        form = TakeAppointmentForm(section_name=section_name)
-
-    return render(request, 'appointment/appointment.html', {'form': form})
-
-
-
-def my_appointment(request):
-    
-    context = {
-
-    }
-    return render(request, 'appointment/my_appointment.html')
+        
+        return render(request, self.template_name, {'form': form, 'section_name': section_name})
