@@ -17,9 +17,8 @@ class TakeAppointmentForm(forms.ModelForm):
         if section_name:
             self.fields['doctor'].queryset = Doctors.objects.filter(section__section_name=section_name)
         else:
-            self.fields['doctor'].queryset = Doctors.objects.all()
-            print("noneeeee")
-
+            self.fields['doctor'].queryset = Doctors.objects.none()  
+            print("section name dosent found yet(we talk from appointment form)")
     def save(self, commit=True):
         appointment = super().save(commit=False)
         if commit:
